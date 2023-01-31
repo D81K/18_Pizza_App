@@ -1,0 +1,21 @@
+{% extends 'pizza/base.html' %}
+
+{% block body %}
+
+<h1>Order Page</h1>
+
+
+{% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+{% endif %}
+
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Order">
+</form>
+
+{% endblock body %}

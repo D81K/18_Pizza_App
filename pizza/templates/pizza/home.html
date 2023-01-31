@@ -1,0 +1,9 @@
+{% extends 'pizza/base.html' %}
+
+{% block body %}
+    <h1>Welcome to Nadia's Garden Restaurant</h1>
+    <p>{{ request.user | upper }}</p>
+    {% load static %}
+    <img style='background-size: contain' src="{% static 'pizza/nadiasgarden.jpg' %}" alt="Nadia's Garden Image">
+
+{% endblock body %}
