@@ -21,5 +21,5 @@ class Pizza(models.Model):
 
     def __str__(self):
         toppings = ', '.join(str(v) for v in self.topping.all())
-        return f'{self.size.name} - {toppings}'
+        return f'{self.id} {self.size.name} - {toppings}'
 
